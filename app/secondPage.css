@@ -1,0 +1,135 @@
+* {
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+ }
+
+
+body{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+
+.display {
+    
+    background-color: #F5D5C4;
+
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: 50%;   
+    margin-top: -200px;
+    height: 400px;
+    width: 1600px;
+
+    border-radius: 200px;
+}   
+
+.menu {
+
+    display: flex;
+    position: absolute;
+    margin-top: -10px;
+    top: 50%;
+
+}
+
+.menu .back {
+
+    margin-top: 10px;
+    background-color: #d46643;
+    height: 80px;
+    width: 120px;
+    border-radius: 175px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-250%, -220%);
+
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.menu .shutDown  {
+
+    margin-top: 10px;
+    background-color: #d46643;
+    height: 80px;
+    width: 120px;
+    border-radius: 175px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(150%, -220%);
+
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.menu .start{
+
+    margin-top: 10px;
+    background-color: #d46643;
+    height: 350px;
+    width: 350px;
+    border-radius: 175px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    cursor: pointer;
+
+}
+
+
+
+.button {
+    background-color: #d46643;
+    width: 80px;
+    border-radius: 40px;
+    transform: translate(160%, 0);
+    cursor: pointer;
+}
+
+.menu .pace{
+
+    margin-top: 70px;
+    height: 350px;
+    width: 350px;
+    border-radius: 175px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(125%, -50%);
+
+
+    text-align: center;
+
+}
+
+.menu .timer{
+
+    margin-top: 70px;
+    height: 350px;
+    width: 350px;
+    border-radius: 175px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-225%, -50%);
+    text-align: center;
+
+}
+
+#time{
+    
+    width: 120px;   
+    margin-left: 110px;
+}

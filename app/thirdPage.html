@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="thirdPage.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var start = Date.now();
+        setInterval(function() {
+            var delta = Date.now() - start; // milliseconds elapsed since start
+            var min = 20 - Math.floor(delta / 60000) - 1; 
+            var sec = ((20 * 60) - Math.floor(delta / 1000)) % 60;
+            document.getElementById("time").innerHTML = min.toString() + " : " + sec.toString();
+        }, 1000); // update about every second
+    </script>
+    <script>
+        const modes = ["slow", "medium", "fast" ];
+        var timer = 20;
+        var i = 1;
+
+        function upMode() {
+            if (i < 2) {
+                i++;
+                document.getElementById("mode").innerHTML = modes[i];
+            }
+        }
+
+        function downMode() {
+            if (i > 0) {
+                i--;
+                document.getElementById("mode").innerHTML = modes[i];
+
+            }
+        }
+
+    </script>
+
+    <div class="display">
+
+        <div class="menu">
+
+            <div class="pace">
+
+                <div class="button" onclick="upMode()">
+                    <span class="material-symbols-outlined" style="font-size:48px;">
+                        expand_less
+                        </span>
+                </div>
+
+                <div class="mode">
+                    <p id="mode">
+                       
+                    </p>
+                </div>
+
+                <div class="button" onclick="downMode()">
+                    <span class="material-symbols-outlined" style="font-size:48px;">
+                        expand_more
+                    </span>
+                </div>
+            </div>
+            <div class="back" onclick="location.href='secondPage.html';">
+                <p style="font-size: 25px;">
+                <span class="material-symbols-outlined" style="font-size: 25px;">
+                    arrow_back
+                </span>    
+                Back</p>
+
+            </div>
+            <div class="start">
+            </br>
+                <div class="tenor-gif-embed" data-postid="15085886" data-share-method="host" data-aspect-ratio="1.57" data-width="100%"></div>
+                <img src="../cooking-pot.gif" alt="asaf"width="220" height="220">
+            </div>
+
+            <div class="shutDown" onclick="location.href='closed.html';">
+                <p style="font-size: 7px;"><br></p>
+                <span class="material-symbols-outlined" style="font-size: 30px;">
+                    power_settings_new
+                    </span>
+            </div>
+        
+            <div class="timer">
+
+                <div class="time">
+                    <p style="font-size: 5px;"><br></p>
+
+                    <p id="time"> 
+                        20 : 00
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("mode").innerHTML = modes[i];
+    </script>
+    
+</body>
+</html>

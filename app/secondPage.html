@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="secondPage.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const modes = ["slow", "medium", "fast" ];
+        var timer = 20;
+        var i = 1;
+
+        function downTimer() {
+            if (timer > 1) {
+                timer = timer - 1;
+                document.getElementById("time").innerHTML = timer.toString() + " : 00";
+            }
+            else {
+                timer = "Not Set";
+                document.getElementById("time").innerHTML = timer.toString();
+            }
+            
+        }
+
+        function upTimer() {
+            if (timer < 60) {
+                timer = timer + 1;
+            }
+            else if (timer == "Not Set") {
+                timer = 1;
+            }
+            document.getElementById("time").innerHTML = timer.toString() + " : 00";
+        }
+
+        function upMode() {
+            if (i < 2) {
+                i++;
+                document.getElementById("mode").innerHTML = modes[i];
+            }
+        }
+
+        function downMode() {
+            if (i > 0) {
+                i--;
+                document.getElementById("mode").innerHTML = modes[i];
+
+            }
+        }
+
+    </script>
+
+    <div class="display">
+
+        <div class="menu">
+
+            <div class="pace">
+
+                <div class="button" onclick="upMode()">
+                    <span class="material-symbols-outlined" style="font-size:48px;">
+                        expand_less
+                        </span>
+                </div>
+
+                <div class="mode">
+                    <p id="mode">
+                       
+                    </p>
+                </div>
+
+                <div class="button" onclick="downMode()">
+                    <span class="material-symbols-outlined" style="font-size:48px;">
+                        expand_more
+                    </span>
+                </div>
+            </div>
+
+            <div class="back" onclick="location.href='index.html';">
+                <p style="font-size: 25px;">
+                <span class="material-symbols-outlined" style="font-size: 25px;">
+                    arrow_back
+                </span>    
+                Back</p>
+
+            </div>
+
+            <div class="start" onclick="location.href='thirdPage.html';">
+                </br></br>
+                <h1>START</h1>
+            </div>
+
+            <div class="shutDown" onclick="location.href='closed.html';">
+                <p style="font-size: 7px;"><br></p>
+                <span class="material-symbols-outlined" style="font-size: 30px;">
+                    power_settings_new
+                    </span>
+            </div>
+        
+            <div class="timer">
+                
+                <div class="button" onclick="upTimer()">
+                    <span class="material-symbols-outlined" style="font-size:48px;">
+                        expand_less
+                    </span>
+                </div>
+
+                <div class="time">
+                    <p id="time">
+                    </p>
+                </div>
+
+                <div class="button" onclick="downTimer()">
+                    <span class="material-symbols-outlined" style="font-size:48px;">
+                        expand_more
+                        </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("mode").innerHTML = modes[i];
+        document.getElementById("time").innerHTML = timer.toString() + " : 00";
+    </script>
+
+</body>
+</html>
